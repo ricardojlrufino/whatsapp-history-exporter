@@ -2,14 +2,20 @@
 
 Tool to export Whatsapp chat history emulating Whatsapp APP, using NodeJS + baileys whatsapp lib.
 
+_Note: The code has not been extensively tested and needs revisions, but the basic functional part is OK._
+
 # Init
 
 > yarn install
 
 
-## Expor only contacs in list (optional) 
+## Extract data customization
 
-create a file named 'includeList.txt', add numbers , one per line. 
+Edit SyncConfig in `src/extract.ts`, to control exporter  ..
+
+**Expor only contacs in list (optional):**
+
+create a file named 'includeList.txt', add numbers one per line. 
 
 # Extract Messages (to JSON)
 

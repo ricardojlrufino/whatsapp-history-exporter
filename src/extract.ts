@@ -27,8 +27,8 @@ interface SyncConfig {
 const syncConfig: SyncConfig = {
   // Incluir arquivos de mídia
   includeMedia: true,
-
   includeGroup: false,
+
   // Tipos específicos de mensagem
   messageTypes: [
     'conversation',
@@ -37,8 +37,6 @@ const syncConfig: SyncConfig = {
     // 'videoMessage',
     'documentMessage'
   ],
-  // Limite máximo de mensagens
-  maxMessages: 100,
 
   includeList: []
 }
@@ -166,7 +164,7 @@ async function connectToWhatsApp() {
       const phone = remoteJid.split('@')[0];
 
       if(syncConfig.includeList){
-        if (!syncConfig.includeList.includes(phone.substring(2)) ){
+        if (!syncConfig.includeList.includes(phone.substring(2)) ){ // remover codigo de area
           console.log("Ignorando contato: " + phone);
           continue;
         }
