@@ -46,12 +46,12 @@ class WhatsAppDataReader {
             'stickerMessage'
         ].includes(messageType);
 
-        const timestamp = new Date(parseInt(messageData.messageTimestamp) * 1000)
-        timestamp.setHours(timestamp.getHours() - 3)
+        const date = new Date(parseInt(messageData.messageTimestamp) * 1000)
+        date.setHours(date.getHours() - 3)
 
         return {
             messageId: messageData.key.id || '',
-            timestamp,
+            date,
             chatId,
             fromMe: messageData.key.fromMe,
             type: messageType.replace('Message', ''),

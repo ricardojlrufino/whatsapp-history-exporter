@@ -36,3 +36,7 @@ Create .env file with content:
 
 > yarn run migrate  
 
+# TODO 
+
+- [ ] export to txt
+- [ ] view messages using: https://overbits.herokuapp.com/chatviewer/

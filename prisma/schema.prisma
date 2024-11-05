@@ -10,13 +10,13 @@ datasource db {
 
 model Message {
   messageId String   @unique // ID original da mensagem do WhatsApp
-  timestamp DateTime
+  date      DateTime
   chatId    String
   type      String
   fromMe    Boolean  @default(false)
   text      String?  @db.Text
   hasMedia  Boolean  @default(false)
   @@index([chatId])
-  @@index([timestamp])
+  @@index([date])
 }
 
