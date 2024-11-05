@@ -32,7 +32,7 @@ Create .env file with content:
 > yarn prisma generate  
 > yarn prisma db push  
 
-## Start export
+## Start migrate
 
 > yarn run migrate  
 
